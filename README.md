@@ -1,6 +1,6 @@
 # ⚡ Solana Wallet App
 
-> A sleek React + Tailwind CSS application built on the **Solana blockchain** allowing users to connect Phantom wallets, create and mint tokens, send tokens, and view transaction history — all with a beautifully modern UI.
+> A sleek React + Tailwind CSS application built on the **Solana blockchain** allowing users to connect Phantom wallets, create and mint tokens, send tokens, and view transaction history — all with a beautifully/Simple UI.
 
 ![Screenshot](src/styles/solanaSS1.jpg)
 ![Screenshot2](src/styles/solanaSS2.jpg)
@@ -52,19 +52,6 @@ The app will run locally at `http://localhost:3000`.
 
 ---
 
-## 📸 UI Screenshots
-
-### 🧩 Connect Wallet Screen
-![Connect Wallet](https://via.placeholder.com/800x400?text=Connect+Wallet+Modal)
-
-### 💰 Token Management Panel
-![Token Actions](https://via.placeholder.com/800x400?text=Create+%2F+Mint+%2F+Send+Tokens)
-
-### 📊 Transaction History
-![Transaction History](https://via.placeholder.com/800x400?text=Transaction+List+with+Explorer+Links)
-
----
-
 ## 🌐 Environment Variables
 
 No custom `.env` is required unless you're integrating further backend features.
@@ -76,10 +63,8 @@ No custom `.env` is required unless you're integrating further backend features.
 ```
 src/
 │
-├── assets/         # Icons and images
 ├── components/     # UI components (WalletModal, TokenCard, TxList, etc.)
-├── contexts/       # Wallet context provider
-├── pages/          # Main views (Dashboard, Connect)
+├── utils/     
 ├── styles/         # Tailwind & custom CSS
 └── App.js          # Main application entry
 ```
@@ -101,6 +86,15 @@ src/
 3. Commit changes: `git commit -m "Add feature"`  
 4. Push branch: `git push origin feature-name`  
 5. Submit a Pull Request
+
+---
+
+## 🔮 Future Improvements
+
+🖼️ UI Improvement
+🧠 AI-Powered Token Naming Suggestions
+📈 Analytics Dashboard  
+🔐 Multi-Wallet Support  
 
 ---
 
