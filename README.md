@@ -1,149 +1,109 @@
-# Solana Token App
+# ⚡ Solana Wallet App
 
-![Solana Logo](https://solana.com/src/img/branding/solanaLogoMark.svg)
+> A sleek React + Tailwind CSS application built on the **Solana blockchain** allowing users to connect Phantom wallets, create and mint tokens, send tokens, and view transaction history — all with a beautifully modern UI.
 
-## Overview
-A modern web application for interacting with the Solana blockchain. Create, mint, and manage SPL tokens with ease through an intuitive interface.
+![Screenshot](src/styles/solanaSS1.jpg)
+![Screenshot2](src/styles/solanaSS2.jpg)
 
-## Features
+---
 
-### Wallet Integration
-- 🔌 Connect with Phantom, Solflare, and other Solana wallets
-- 📜 View wallet address and transaction history
-- 🛑 Easy wallet disconnection
+## 🚀 Tech Stack
 
-### Token Management
-- 🪙 Create custom SPL tokens with metadata
-- 🏗️ Mint tokens to your wallet
-- 💸 Send tokens to any Solana address
-- 📊 Track token balances in real-time
+- **Frontend:** React.js, Tailwind CSS
+- **Blockchain:** Solana Web3.js, Phantom Wallet Integration
+- **Token Utilities:** @solana/spl-token
+- **UI Enhancements:** Glassmorphism, Responsive Grid Layout, CSS Variables
 
-### User Experience
-- 🎨 Clean, modern interface
-- 📱 Fully responsive design
-- 🔔 Transaction notifications
-- 🚦 Error handling and validation
+---
 
-## Tech Stack
+## ✨ Features
 
-| Component       | Technology                          |
-|-----------------|-------------------------------------|
-| Framework       | Next.js                             |
-| UI Library      | React.js                            |
-| Styling         | Tailwind CSS                        |
-| Blockchain      | Solana Web3.js                      |
-| Token Standard  | SPL Token Program                   |
-| Wallets         | Phantom, Solflare, Backpack         |
-| Deployment      | Vercel                              |
+- 🔐 Connect Phantom Wallet securely
+- 🪙 Create and mint your own SPL tokens
+- 💸 Send tokens to other wallets
+- 📜 Transaction history with explorer links
+- 📱 Fully responsive modern UI with animated effects
+- 🌗 Light/Dark theme support via system preference
 
-## Getting Started
+---
 
-### Prerequisites
-- Node.js v16 or later
-- npm or yarn
-- Solana wallet extension (Phantom recommended)
+## 🔧 Installation & Setup
 
-### Installation
+### 1. Clone the Repository
+
 ```bash
-## Clone the Repository
-```sh
-git clone https://github.com/AKSHAT-ARORA03/Solana-Token-App.git
-cd Solana-Token-App
+git clone https://github.com/your-username/solana-wallet-app.git
+cd solana-wallet-app
 ```
 
-## Install Dependencies
-```sh
+### 2. Install Dependencies
+
+```bash
 npm install
 ```
 
-## Start Development Server
-```sh
-npm run dev
+### 3. Run the App
+
+```bash
+npm start
 ```
 
-The app will be running at [http://localhost:3000](http://localhost:3000)
+The app will run locally at `http://localhost:3000`.
 
-## Configuration
-Create a `.env.local` file in the root directory with your configuration:
+---
+
+## 📸 UI Screenshots
+
+### 🧩 Connect Wallet Screen
+![Connect Wallet](https://via.placeholder.com/800x400?text=Connect+Wallet+Modal)
+
+### 💰 Token Management Panel
+![Token Actions](https://via.placeholder.com/800x400?text=Create+%2F+Mint+%2F+Send+Tokens)
+
+### 📊 Transaction History
+![Transaction History](https://via.placeholder.com/800x400?text=Transaction+List+with+Explorer+Links)
+
+---
+
+## 🌐 Environment Variables
+
+No custom `.env` is required unless you're integrating further backend features.
+
+---
+
+## 📁 Folder Structure
 
 ```
-NEXT_PUBLIC_SOLANA_NETWORK=devnet
-NEXT_PUBLIC_RPC_ENDPOINT=https://api.devnet.solana.com
+src/
+│
+├── assets/         # Icons and images
+├── components/     # UI components (WalletModal, TokenCard, TxList, etc.)
+├── contexts/       # Wallet context provider
+├── pages/          # Main views (Dashboard, Connect)
+├── styles/         # Tailwind & custom CSS
+└── App.js          # Main application entry
 ```
 
-## Deployment
-### Vercel
-Install Vercel CLI:
-```sh
-npm install -g vercel
-```
+---
 
-Deploy:
-```sh
-vercel --prod
-```
+## 🔗 Useful Links
 
-## Usage
-### Connect Your Wallet
-Use the button in the header to connect your wallet.
+- [Solana Docs](https://docs.solana.com/)
+- [Phantom Wallet](https://phantom.app/)
+- [Solana Explorer](https://explorer.solana.com/)
 
-### Create a New Token
-1. Navigate to "Create Token"
-2. Enter token details (name, symbol, decimals)
-3. Click "Create"
+---
 
-### Mint Tokens
-1. Go to "My Tokens"
-2. Select your token
-3. Enter amount and click "Mint"
+## 🤝 Contributing
 
-### Send Tokens
-1. Select "Send Tokens"
-2. Enter recipient address and amount
-3. Confirm transaction
+1. Fork the repository  
+2. Create your branch: `git checkout -b feature-name`  
+3. Commit changes: `git commit -m "Add feature"`  
+4. Push branch: `git push origin feature-name`  
+5. Submit a Pull Request
 
-## Screenshots
-- Dashboard
-- Token Creation
-- Transaction History
+---
 
-## Troubleshooting
-### Wallet Connection Issues:
-- Ensure your wallet extension is installed and unlocked
-- Refresh the page and try again
-- Check console for errors (`F12` in Chrome)
+## 📄 License
 
-### Transaction Failures:
-- Verify you have enough SOL for gas fees
-- Check network connection
-- Ensure you're on the correct network (Devnet)
-
-## Contributing
-1. Fork the repository
-2. Create a feature branch:
-   ```sh
-   git checkout -b feature/your-feature
-   ```
-3. Commit your changes:
-   ```sh
-   git commit -m 'Add some feature'
-   ```
-4. Push to the branch:
-   ```sh
-   git push origin feature/your-feature
-   ```
-5. Open a Pull Request
-
-## License
-MIT License - See `LICENSE` for details.
-
-## Support
-For support, please:
-- Open an issue
-- Join our Discord server
-- Email: akshataroa1299@gmail.com
-
-## Acknowledgements
-- Solana Labs for the amazing blockchain
-- Phantom team for wallet integration
-- The Web3 community for inspiration
+This project is licensed under the [MIT License](LICENSE).
