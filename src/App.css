@@ -1,0 +1,268 @@
+:root {
+  --primary-color: #2dd4bf; /* Teal */
+  --primary-hover: #14b8a6;
+  --secondary-color: #a78bfa; /* Soft Lavender */
+  --secondary-hover: #8b5cf6;
+  --card-bg-light: rgba(255, 255, 255, 0.75);
+  --card-bg-dark: rgba(24, 24, 27, 0.85);
+  --text-light: #1e293b; /* Slate-800 */
+  --text-dark: #f1f5f9;   /* Slate-100 */
+  --border-color: rgba(0, 0, 0, 0.08);
+  --glass-blur: blur(16px);
+}
+
+/* ===== Global Styles ===== */
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--card-bg-light);
+  color: var(--text-light);
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  height: 100%;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+.App {
+  min-height: 100vh;
+  padding: 2rem;
+  transition: padding 0.3s ease;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: var(--card-bg-dark);
+    color: var(--text-dark);
+  }
+}
+
+/* ===== Card ===== */
+.card {
+  background: var(--card-bg-light);
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  margin: 2rem auto;
+  max-width: 600px;
+  transition: all 0.4s ease-in-out;
+  backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--border-color);
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.12);
+}
+
+@media (prefers-color-scheme: dark) {
+  .card {
+    background: var(--card-bg-dark);
+    box-shadow: 0 6px 20px rgba(255, 255, 255, 0.05);
+  }
+}
+
+/* ===== Inputs ===== */
+.input-field {
+  width: 100%;
+  padding: 0.875rem 1rem;
+  font-size: 1rem;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  margin-bottom: 1.2rem;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input-field:focus {
+  border-color: var(--primary-color);
+  outline: none;
+  box-shadow: 0 0 10px rgba(45, 212, 191, 0.4);
+}
+
+/* ===== Buttons ===== */
+button,
+.primary-button,
+.secondary-button,
+.copy-button,
+.disconnect-btn,
+.wallet-modal button {
+  padding: 0.875rem 1.5rem;
+  border: none;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.4s ease;
+  width: 100%;
+}
+
+.primary-button {
+  background: var(--primary-color);
+  color: white;
+}
+
+.primary-button:hover {
+  background: var(--primary-hover);
+  transform: scale(1.03);
+}
+
+.primary-button:disabled {
+  background: #cbd5e1;
+  cursor: not-allowed;
+}
+
+.secondary-button {
+  background: var(--secondary-color);
+  color: white;
+}
+.secondary-button:hover {
+  background: var(--secondary-hover);
+  transform: scale(1.03);
+}
+
+.copy-button {
+  margin-top: 0.5rem;
+  background: var(--secondary-color);
+  color: white;
+}
+.copy-button:hover {
+  background: var(--secondary-hover);
+  transform: scale(1.05);
+}
+
+.disconnect-btn {
+  background: #ef4444;
+  color: white;
+}
+.disconnect-btn:hover {
+  background: #dc2626;
+  transform: scale(1.05);
+}
+
+/* ===== Wallet Modal ===== */
+.wallet-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 255, 255, 0.97);
+  padding: 2rem;
+  border-radius: 20px;
+  z-index: 1000;
+  max-width: 420px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+.wallet-selection {
+  background: rgba(255, 255, 255, 0.12);
+  padding: 1.5rem;
+  border-radius: 16px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* ===== Wallet Card & Info ===== */
+.wallet-card {
+  padding: 2rem;
+  text-align: center;
+}
+
+.wallet-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.wallet-details {
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+}
+
+.wallet-balance {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+/* ===== Lists ===== */
+.token-list,
+.tx-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem;
+}
+
+.token-list li,
+.tx-list li {
+  background: rgba(0, 0, 0, 0.05);
+  padding: 0.75rem 1rem;
+  margin-bottom: 0.75rem;
+  border-radius: 10px;
+  font-weight: 500;
+}
+
+.tx-list a {
+  color: var(--secondary-color);
+  text-decoration: none;
+}
+.tx-list a:hover {
+  color: var(--secondary-hover);
+  text-decoration: underline;
+}
+
+@media (prefers-color-scheme: dark) {
+  .token-list li,
+  .tx-list li {
+    background: rgba(255, 255, 255, 0.1);
+  }
+}
+
+/* ===== Info Text ===== */
+.info-text {
+  background: rgba(255, 255, 255, 0.12);
+  padding: 1rem;
+  border-radius: 10px;
+  color: white;
+  text-align: center;
+  margin: 1rem 0;
+  backdrop-filter: blur(6px);
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+@media (prefers-color-scheme: dark) {
+  .info-text {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+}
+
+/* ===== Animation Keyframes ===== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* ===== Responsive ===== */
+@media screen and (max-width: 768px) {
+  .card {
+    max-width: 90%;
+    padding: 1.5rem;
+  }
+
+  .primary-button,
+  .secondary-button {
+    padding: 0.75rem 1.25rem;
+  }
+}
